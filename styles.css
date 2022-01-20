@@ -26,6 +26,7 @@ form {
     justify-content: center;
 }
 
+/* input main */
 
 #wpisz {
     text-align: center;
@@ -36,6 +37,16 @@ form {
     opacity: .6;
     padding: 5px;
     width: 100%;
+    transition: ease-in-out, width .35s ease-in-out;
+}
+
+#wpisz:focus {
+    color: #2ECC71;
+    border: #2ECC71 solid 1px;
+}
+
+#wpisz:focus::-webkit-input-placeholder {
+    color: transparent;
 }
 
 .w {
@@ -43,6 +54,7 @@ form {
     text-align: center;
 }
 
+/* label */
 
 select {
     width: 50%;
@@ -59,11 +71,13 @@ select {
 }
 
 
-.l > label {
+.l > label,
+.c > label {
     margin-right: 5px;
 }
 
-.l > img {
+.l > img,
+.c > img {
     margin-right: 15px;
 }
 
@@ -72,10 +86,6 @@ select {
     align-items: center;
     margin-bottom: 40px;
 }
-
-/* #PPK::before {
-    color: red;
-} */
 
 label {
     font-size: 15px;
@@ -89,21 +99,32 @@ img {
     opacity: 0.5;
 }
 
+a{
+    height: 20px;
+    padding: 5px;
+}
+
+/* Checkbox */
+
 .check {
     display: flex;
     flex-direction: row;
     align-items: center;
-    flex-wrap: row-wrap;
+    flex-wrap: wrap;
+}
+.c {
+    margin: 0 auto;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
 }
 
-#Fundusz,
-#FGSP {
-    flex-basis: 50%;
+.c:last-child {
+    margin-bottom: 40px;
 }
 
-
-
-
+/* Button */
 
 button {
     background: #2ECC71 0% 0% no-repeat padding-box;
