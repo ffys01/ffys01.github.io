@@ -12,48 +12,65 @@
     Nowy Ład</h1>
     <main>
         <form action="#">
-            <input type="text" placeholder="Wpisz kwotę brutto" id="wpisz">
+            <div class="w"><input type="text" placeholder="Wpisz kwotę brutto" id="wpisz"></div>
             
-            <select name="PIT" id="PIT">
-                <option value="Nie">Nie</option>
-                <option value="Tak">Tak</option>
-            </select>
-            <label for="PIT">Zwolnienie z PIT</label><img src="https://img.icons8.com/ios/50/000000/help.png"/>
+            
+            <div class="l">
+                <select name="PIT" id="PIT">
+                    <option value="Nie">Nie</option>
+                    <option value="Tak">Tak</option>
+                </select>
+                <label for="PIT">Zwolnienie z PIT</label><img src="https://img.icons8.com/ios/50/000000/help.png"/>
+            </div>
 
-            <select name="Koszty" id="Koszty">
-                <option value="Zwykłe">Zwykłe</option>
-                <option value="Podwyższone">Podwyższone</option>
-            </select>
-            <div class="l"><label for="Koszty">Koszty</label><img src="https://img.icons8.com/ios/50/000000/help.png"/></div>
+            
+            <div class="l">
+                <select name="Koszty" id="Koszty">
+                    <option value="Zwykłe">Zwykłe</option>
+                    <option value="Podwyższone">Podwyższone</option>
+                </select>
+                <label for="Koszty">Koszty</label><img src="https://img.icons8.com/ios/50/000000/help.png"/>
+            </div>
 
-            <select name="Ulga" id="Ulga">
-                <option value="Brak">Brak</option>
-                <option value="Poj">Pojedyńcza</option>
-                <option value="Pod">Podwójna</option>
-            </select>
-            <label for="PIT">Ulga<img src="https://img.icons8.com/ios/50/000000/help.png"/></label>
+            
+            <div class="l">
+                <select name="Ulga" id="Ulga">
+                    <option value="Brak">Brak</option>
+                    <option value="Poj">Pojedyńcza</option>
+                    <option value="Pod">Podwójna</option>
+                </select>
+                <label for="PIT">Ulga</label><img src="https://img.icons8.com/ios/50/000000/help.png"/>
+            </div>
 
-            <select name="UlgaS" id="UlgaS">
-                <option value="Nie">Nie</option>
-                <option value="Tak">Tak</option>
-            </select>
-            <label for="UlgaS">Ulga dla klasy średniej<img src="https://img.icons8.com/ios/50/000000/help.png"/></label>
+            
+            <div class="l">
+                <select name="UlgaS" id="UlgaS">
+                    <option value="Nie">Nie</option>
+                    <option value="Tak">Tak</option>
+                </select>
+                
+                <label for="UlgaS">Ulga dla klasy średniej</label><img src="https://img.icons8.com/ios/50/000000/help.png"/>
+            </div>
 
-            <select name="Prog" id="Prog">
-                <option value="Pierwszy">Pierwszy</option>
-                <option value="Drugi">Drugi</option>
-            </select>
-            <label for="Prog">Próg podatkowy<img src="https://img.icons8.com/ios/50/000000/help.png"/></label>
+            
+            <div class="l">
+                <select name="Prog" id="Prog">
+                    <option value="Pierwszy">Pierwszy</option>
+                    <option value="Drugi">Drugi</option>
+                </select>
+                <label for="Prog">Próg podatkowy</label><img src="https://img.icons8.com/ios/50/000000/help.png"/>
+            </div>
 
             <div class="check">
-                <input type="checkbox" name="Fundusz" id="Fundusz">
-                <label for="Fundusz">Fundusz Pracy<img src="https://img.icons8.com/ios/50/000000/help.png"/></label>
+                
+                <div class="l c"><input type="checkbox" name="Fundusz" id="Fundusz"><label for="Fundusz">Fundusz Pracy</label><img src="https://img.icons8.com/ios/50/000000/help.png"/></div>
 
-                <input type="checkbox" name="FGSP" id="FGSP">
-                <label for="FGSP">FGŚP<img src="https://img.icons8.com/ios/50/000000/help.png"/></label>
+               
+                <div class="l c"> <input type="checkbox" name="FGSP" id="FGSP"><label for="FGSP">FGŚP</label><img src="https://img.icons8.com/ios/50/000000/help.png"/></div>
 
-                <input type="checkbox" name="PPK" id="PPK">
-                <label for="PPK">PPK<img src="https://img.icons8.com/ios/50/000000/help.png"/></label>
+                
+                <div class="l c"><input type="checkbox" name="PPK" id="PPK"><label for="PPK">PPK</label><img src="https://img.icons8.com/ios/50/000000/help.png"/></div>
+
             </div>
 
             <button id="Wylicz">Wylicz</button>

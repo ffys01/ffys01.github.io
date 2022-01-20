@@ -6,6 +6,10 @@ body {
     font-family: 'Cerebri Sans', sans-serif;
 }
 
+main {
+    padding: 15px;
+}
+
 h1 {
     text-align: center;
     font: normal normal normal 25px/31px Cerebri Sans;
@@ -15,30 +19,101 @@ h1 {
     margin-bottom: 40px;
 }
 
+form {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 
 #wpisz {
     text-align: center;
     border: none;
     font-size: 15px;
-    border-bottom: 2px #1A1A1A;
     margin-bottom: 40px;
+    border-bottom: 1px #1a1a1a54 solid;
+    opacity: .6;
+    padding: 5px;
+    width: 100%;
 }
 
-label {
-    font-size: 15px;
+.w {
+    width: 100%;
+    text-align: center;
 }
 
-img {
-    height: 20px;
-    width: 20px;
+
+select {
+    width: 50%;
+    margin-right: 5px;
+    border: 1px solid var(--unnamed-color-707070);
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+    border-radius: 15px;
+    opacity: 0.5;
+}
+
+#UlgaS {
+    width: 40%;
+}
+
+
+.l > label {
+    margin-right: 5px;
+}
+
+.l > img {
+    margin-right: 15px;
 }
 
 .l {
     display: flex;
     align-items: center;
+    margin-bottom: 40px;
 }
 
-form {
+/* #PPK::before {
+    color: red;
+} */
+
+label {
+    font-size: 15px;
+    color: #1A1A1A;
+}
+
+img {
+    height: 20px;
+    width: 20px;
+    background: transparent url('img/icons8-help-50 (1).png') 0% 0% no-repeat padding-box;
+    opacity: 0.5;
+}
+
+.check {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: row-wrap;
+}
+
+#Fundusz,
+#FGSP {
+    flex-basis: 50%;
+}
+
+
+
+
+
+button {
+    background: #2ECC71 0% 0% no-repeat padding-box;
+    border: 1px solid #FFFFFF;
+    border-radius: 25px;
+    text-align: center;
+    font: normal normal normal 20px/25px Cerebri Sans;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+    padding: 5px 10px;
+    cursor: pointer;
 }
