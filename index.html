@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Nowy Ład</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Kalkulator Przychodu<br>
+    Nowy Ład</h1>
+    <main>
+        <form action="#">
+            <input type="text" placeholder="Wpisz kwotę brutto" id="wpisz">
+            
+            <select name="PIT" id="PIT">
+                <option value="Nie">Nie</option>
+                <option value="Tak">Tak</option>
+            </select>
+            <label for="PIT">Zwolnienie z PIT</label><img src="https://img.icons8.com/ios/50/000000/help.png"/>
+
+            <select name="Koszty" id="Koszty">
+                <option value="Zwykłe">Zwykłe</option>
+                <option value="Podwyższone">Podwyższone</option>
+            </select>
+            <div class="l"><label for="Koszty">Koszty</label><img src="https://img.icons8.com/ios/50/000000/help.png"/></div>
+
+            <select name="Ulga" id="Ulga">
+                <option value="Brak">Brak</option>
+                <option value="Poj">Pojedyńcza</option>
+                <option value="Pod">Podwójna</option>
+            </select>
+            <label for="PIT">Ulga<img src="https://img.icons8.com/ios/50/000000/help.png"/></label>
+
+            <select name="UlgaS" id="UlgaS">
+                <option value="Nie">Nie</option>
+                <option value="Tak">Tak</option>
+            </select>
+            <label for="UlgaS">Ulga dla klasy średniej<img src="https://img.icons8.com/ios/50/000000/help.png"/></label>
+
+            <select name="Prog" id="Prog">
+                <option value="Pierwszy">Pierwszy</option>
+                <option value="Drugi">Drugi</option>
+            </select>
+            <label for="Prog">Próg podatkowy<img src="https://img.icons8.com/ios/50/000000/help.png"/></label>
+
+            <div class="check">
+                <input type="checkbox" name="Fundusz" id="Fundusz">
+                <label for="Fundusz">Fundusz Pracy<img src="https://img.icons8.com/ios/50/000000/help.png"/></label>
+
+                <input type="checkbox" name="FGSP" id="FGSP">
+                <label for="FGSP">FGŚP<img src="https://img.icons8.com/ios/50/000000/help.png"/></label>
+
+                <input type="checkbox" name="PPK" id="PPK">
+                <label for="PPK">PPK<img src="https://img.icons8.com/ios/50/000000/help.png"/></label>
+            </div>
+
+            <button id="Wylicz">Wylicz</button>
+        </form>
+    </main>
+</body>
+</html>
