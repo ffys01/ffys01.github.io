@@ -21,6 +21,11 @@ h1 {
     margin-bottom: 40px;
 }
 
+h3 {
+    font-size: 40px;
+    font-weight: bolder;
+}
+
 form {
     width: 100%;
     margin: 0 auto;
@@ -143,6 +148,37 @@ button {
     cursor: pointer;
 }
 
-.popped-q {
+
+
+/* question mark window */
+
+#popped-q {
     display: none;
+    flex-direction: column;
+    margin: 0 15px;
+}
+
+.nav-q {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* .nav-q > h3 {
+
+} */
+
+.nav-q > a {
+    cursor: pointer;
+    height: 100%;
+}
+
+.x {
+    background-color: #2ECC71;
+    border-radius: 25%;
+    padding: 6px 0;
+    padding-right: 3px;
+    opacity: 1;
+    width: 46px;
+    height: 40px;
 }

@@ -9,7 +9,17 @@ let FGSP = document.getElementById("FGSP");
 let PPK = document.getElementById("PPK");
 let body = document.body;
 const form = document.getElementById("formularz");
-const cont = document.getElementsByClassName("container");
+const h1 = document.getElementById("h-1")
+let poppedQ = document.getElementById("popped-q");
+
+// default values
+
+brutto = 0;
+PIT = "Nie";
+koszty = "Zwykle";
+ulga = "Brak";
+ulgaS = "Nie";
+prog = "Pierwszy";
 
 // fetched question
 
@@ -25,100 +35,164 @@ let qPPK = document.getElementById("q-PPK");
 let fetchedQuestion = [qPIT, qKoszty, qUlga, qUlgaS, qProg, qFundusz, qFGSP, qPPK]
 
 
+
+
+
+
+// functions
 qPIT.addEventListener("click", () => {
 
+    poppedQ.style.display = "flex";
     form.style.display = "none";
+    h1.style.display = "none";
 
-    body.innerHTML += `
-
-    <div class="popped-q" style="display: flex"><p>PIT</p></div>
+    poppedQ.innerHTML = `
+        <div class="nav-q">
+            <h3>PIT</h3>
+            <a href="#" id="exit" onclick="exit()" ><img class="x" src="./x.png"></a>
+        </div>
+        <div class="description">
+            <h4>Tak</h4><p>Wybierz tą opcje jeżeli nie ukończyłeś <b>26</b> roku życia.</p>
+            <h4>Nie</h4><p>Wybierz tą opcje jeżeli ukończyłeś <b>26</b> rok życia.</p>
+        </div>
 
     `
 }
 )
 qKoszty.addEventListener("click", () => {
 
+    poppedQ.style.display = "flex";
     form.style.display = "none";
+    h1.style.display = "none";
 
-    body.innerHTML += `
-
-    <div class="popped-q" style="display: flex"><p>KOSZTY</p></div>
+    poppedQ.innerHTML = `
+        <div class="nav-q">
+            <h3>PIT</h3>
+            <a href="#" id="exit" onclick="exit()" ><img class="x" src="./x.png"></a>
+        </div>
+        <div class="description">
+            <h4>Tak</h4><p>Wybierz tą opcje jeżeli nie ukończyłeś <b>26</b> roku życia.</p>
+            <h4>Nie</h4><p>Wybierz tą opcje jeżeli ukończyłeś <b>26</b> rok życia.</p>
+        </div>
 
     `
 })
 qUlga.addEventListener("click", () => {
 
+    poppedQ.style.display = "flex";
     form.style.display = "none";
+    h1.style.display = "none";
 
-    body.innerHTML += `
-
-    <div class="popped-q" style="display: flex"><p>ULGA</p></div>
+    poppedQ.innerHTML = `
+        <div class="nav-q">
+            <h3>PIT</h3>
+            <a href="#" id="exit" onclick="exit()" ><img class="x" src="./x.png"></a>
+        </div>
+        <div class="description">
+            <h4>Tak</h4><p>Wybierz tą opcje jeżeli nie ukończyłeś <b>26</b> roku życia.</p>
+            <h4>Nie</h4><p>Wybierz tą opcje jeżeli ukończyłeś <b>26</b> rok życia.</p>
+        </div>
 
     `
 })
 qUlgaS.addEventListener("click", () => {
 
+    poppedQ.style.display = "flex";
     form.style.display = "none";
+    h1.style.display = "none";
 
-    body.innerHTML += `
-
-    <div class="popped-q" style="display: flex"><p>ULGAS</p></div>
+    poppedQ.innerHTML = `
+        <div class="nav-q">
+            <h3>PIT</h3>
+            <a href="#" id="exit" onclick="exit()" ><img class="x" src="./x.png"></a>
+        </div>
+        <div class="description">
+            <h4>Tak</h4><p>Wybierz tą opcje jeżeli nie ukończyłeś <b>26</b> roku życia.</p>
+            <h4>Nie</h4><p>Wybierz tą opcje jeżeli ukończyłeś <b>26</b> rok życia.</p>
+        </div>
 
     `
 })
 qProg.addEventListener("click", () => {
 
+    poppedQ.style.display = "flex";
     form.style.display = "none";
+    h1.style.display = "none";
 
-    body.innerHTML += `
-
-    <div class="popped-q" style="display: flex"><p>PROG</p></div>
+    poppedQ.innerHTML = `
+        <div class="nav-q">
+            <h3>PIT</h3>
+            <a href="#" id="exit" onclick="exit()" ><img class="x" src="./x.png"></a>
+        </div>
+        <div class="description">
+            <h4>Tak</h4><p>Wybierz tą opcje jeżeli nie ukończyłeś <b>26</b> roku życia.</p>
+            <h4>Nie</h4><p>Wybierz tą opcje jeżeli ukończyłeś <b>26</b> rok życia.</p>
+        </div>
 
     `
 })
 qFundusz.addEventListener("click", () => {
 
+    poppedQ.style.display = "flex";
     form.style.display = "none";
+    h1.style.display = "none";
 
-    body.innerHTML += `
-
-    <div class="popped-q" style="display: flex"><p>FUNDUSZ</p></div>
+    poppedQ.innerHTML = `
+        <div class="nav-q">
+            <h3>PIT</h3>
+            <a href="#" id="exit" onclick="exit()" ><img class="x" src="./x.png"></a>
+        </div>
+        <div class="description">
+            <h4>Tak</h4><p>Wybierz tą opcje jeżeli nie ukończyłeś <b>26</b> roku życia.</p>
+            <h4>Nie</h4><p>Wybierz tą opcje jeżeli ukończyłeś <b>26</b> rok życia.</p>
+        </div>
 
     `
 })
 qFGSP.addEventListener("click", () => {
 
+    poppedQ.style.display = "flex";
     form.style.display = "none";
+    h1.style.display = "none";
 
-    body.innerHTML += `
-
-    <div class="popped-q" style="display: flex"><p>FGSP</p></div>
+    poppedQ.innerHTML = `
+        <div class="nav-q">
+            <h3>PIT</h3>
+            <a href="#" id="exit" onclick="exit()" ><img class="x" src="./x.png"></a>
+        </div>
+        <div class="description">
+            <h4>Tak</h4><p>Wybierz tą opcje jeżeli nie ukończyłeś <b>26</b> roku życia.</p>
+            <h4>Nie</h4><p>Wybierz tą opcje jeżeli ukończyłeś <b>26</b> rok życia.</p>
+        </div>
 
     `
 })
 qPPK.addEventListener("click", () => {
 
+    poppedQ.style.display = "flex";
     form.style.display = "none";
+    h1.style.display = "none";
 
-    body.innerHTML += `
-
-    <div class="popped-q" style="display: flex"><p>PPK</p></div>
+    poppedQ.innerHTML = `
+        <div class="nav-q">
+            <h3>PIT</h3>
+            <a href="#" id="exit" onclick="exit()" ><img class="x" src="./x.png"></a>
+        </div>
+        <div class="description">
+            <h4>Tak</h4><p>Wybierz tą opcje jeżeli nie ukończyłeś <b>26</b> roku życia.</p>
+            <h4>Nie</h4><p>Wybierz tą opcje jeżeli ukończyłeś <b>26</b> rok życia.</p>
+        </div>
 
     `
 })
 
-// default values
+function exit() {
+    poppedQ.style.display = "none";
+    form.style.display = "flex";
+    h1.style.display = "block"
+}
 
-brutto = 0;
-PIT = "Nie";
-koszty = "Zwykle";
-ulga = "Brak";
-ulgaS = "Nie";
-prog = "Pierwszy";
 
-// functions
-console.log(fetchedQuestion[0].id)
-console.log(fetchedQuestion[1].id)
 
 function onChange_(e, x) {
    if(x = "wpisz"){
