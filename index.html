@@ -11,16 +11,15 @@
     <h1>Kalkulator Przychodu<br>
     Nowy Ład</h1>
     <main>
-        <form action="#">
+        <form action="#" id="formularz">
             <div class="w"><input type="number" placeholder="Wpisz kwotę brutto" name="wpisz" value="brutto" onchange="onChange_(value, id)"  id="wpisz"></div>
-            
             
             <div class="l">
                 <select name="PIT" id="PIT" onchange="onChange_(value, id)">
                     <option value="Nie">Nie</option>
                     <option value="Tak">Tak</option>
                 </select>
-                <label for="PIT">Zwolnienie z PIT</label><a href="#" id="q-"><img src="https://img.icons8.com/ios/50/000000/help.png"/></a>
+                <label for="PIT">Zwolnienie z PIT</label><a onclick="popQ()" href="#" id="q-PIT"><img src="https://img.icons8.com/ios/50/000000/help.png"/></a>
             </div>
 
             
@@ -29,7 +28,7 @@
                     <option value="Zwykłe">Zwykłe</option>
                     <option value="Podwyższone">Podwyższone</option>
                 </select>
-                <label for="Koszty">Koszty</label><a href="#" id="q-"><img src="https://img.icons8.com/ios/50/000000/help.png"/></a>
+                <label for="Koszty">Koszty</label><a onclick="popQ()" name="q-koszty" href="#" id="q-koszty"><img src="https://img.icons8.com/ios/50/000000/help.png"/></a>
             </div>
 
             
@@ -39,7 +38,7 @@
                     <option value="Poj">Pojedyńcza</option>
                     <option value="Pod">Podwójna</option>
                 </select>
-                <label for="PIT">Ulga</label><a href="#" id="q-"><img src="https://img.icons8.com/ios/50/000000/help.png"/></a>
+                <label for="Ulga">Ulga</label><a onclick="popQ(id)" href="#" id="q-ulga"><img src="https://img.icons8.com/ios/50/000000/help.png"/></a>
             </div>
 
             
@@ -49,7 +48,7 @@
                     <option value="Tak">Tak</option>
                 </select>
                 
-                <label for="UlgaS">Ulga dla klasy średniej</label><a href="#" id="q-"><img src="https://img.icons8.com/ios/50/000000/help.png"/></a>
+                <label for="UlgaS">Ulga dla klasy średniej</label><a onclick="popQ(parent.id)" href="#" id="q-ulgaS"><img src="https://img.icons8.com/ios/50/000000/help.png"/></a>
             </div>
 
             
@@ -58,18 +57,18 @@
                     <option value="Pierwszy">Pierwszy</option>
                     <option value="Drugi">Drugi</option>
                 </select>
-                <label for="Prog">Próg podatkowy</label><a href="#" id="q-"><img src="https://img.icons8.com/ios/50/000000/help.png"/></a>
+                <label for="Prog">Próg podatkowy</label><a onclick="popQ(id)" href="#" id="q-prog"><img src="https://img.icons8.com/ios/50/000000/help.png"/></a>
             </div>
 
             <div class="check">
                 
-                <div class=" c"><input type="checkbox" checked name="Fundusz" id="fundusz"><label for="Fundusz">Fundusz Pracy</label><a href="#" id="q-"><img src="https://img.icons8.com/ios/50/000000/help.png"/></a></div>
+                <div class=" c"><input type="checkbox" checked name="Fundusz" id="fundusz"><label for="Fundusz">Fundusz Pracy</label><a onclick="popQ(id)" href="#" id="q-fundusz"><img src="https://img.icons8.com/ios/50/000000/help.png"/></a></div>
 
                
-                <div class=" c"> <input type="checkbox" checked name="FGSP" id="FGSP"><label for="FGSP">FGŚP</label><a href="#" id="q-"><img src="https://img.icons8.com/ios/50/000000/help.png"/></a></div>
+                <div class=" c"> <input type="checkbox" checked name="FGSP" id="FGSP"><label for="FGSP">FGŚP</label><a onclick="popQ(id)" href="#" id="q-FGSP"><img src="https://img.icons8.com/ios/50/000000/help.png"/></a></div>
 
                 
-                <div class=" c"><input type="checkbox" name="PPK" id="PPK"><label for="PPK">PPK</label><a href="#" id="q-"><img src="https://img.icons8.com/ios/50/000000/help.png"/></a></div>
+                <div class=" c"><input type="checkbox" name="PPK" id="PPK"><label for="PPK">PPK</label><a onclick="popQ(id)" href="#" id="q-PPK"><img src="https://img.icons8.com/ios/50/000000/help.png"/></a></div>
 
             </div>
 
