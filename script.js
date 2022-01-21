@@ -24,14 +24,88 @@ let qPPK = document.getElementById("q-PPK");
 
 let fetchedQuestion = [qPIT, qKoszty, qUlga, qUlgaS, qProg, qFundusz, qFGSP, qPPK]
 
-// qPIT.setAttribute(role, 'button')
-// qKoszty.setAttribute(role, 'button')
-// qUlga.setAttribute(role, 'button')
-// qUlgaS.setAttribute(role, 'button')
-// qProg.setAttribute(role, 'button')
-// qFundusz.setAttribute(role, 'button')
-// qFGSP.setAttribute(role, 'button')
-// qPPK.setAttribute(role, 'button')
+
+qPIT.addEventListener("click", () => {
+
+    form.style.display = "none";
+
+    body.innerHTML += `
+
+    <div class="popped-q" style="display: flex"><p>PIT</p></div>
+
+    `
+}
+)
+qKoszty.addEventListener("click", () => {
+
+    form.style.display = "none";
+
+    body.innerHTML += `
+
+    <div class="popped-q" style="display: flex"><p>KOSZTY</p></div>
+
+    `
+})
+qUlga.addEventListener("click", () => {
+
+    form.style.display = "none";
+
+    body.innerHTML += `
+
+    <div class="popped-q" style="display: flex"><p>ULGA</p></div>
+
+    `
+})
+qUlgaS.addEventListener("click", () => {
+
+    form.style.display = "none";
+
+    body.innerHTML += `
+
+    <div class="popped-q" style="display: flex"><p>ULGAS</p></div>
+
+    `
+})
+qProg.addEventListener("click", () => {
+
+    form.style.display = "none";
+
+    body.innerHTML += `
+
+    <div class="popped-q" style="display: flex"><p>PROG</p></div>
+
+    `
+})
+qFundusz.addEventListener("click", () => {
+
+    form.style.display = "none";
+
+    body.innerHTML += `
+
+    <div class="popped-q" style="display: flex"><p>FUNDUSZ</p></div>
+
+    `
+})
+qFGSP.addEventListener("click", () => {
+
+    form.style.display = "none";
+
+    body.innerHTML += `
+
+    <div class="popped-q" style="display: flex"><p>FGSP</p></div>
+
+    `
+})
+qPPK.addEventListener("click", () => {
+
+    form.style.display = "none";
+
+    body.innerHTML += `
+
+    <div class="popped-q" style="display: flex"><p>PPK</p></div>
+
+    `
+})
 
 // default values
 
@@ -42,57 +116,9 @@ ulga = "Brak";
 ulgaS = "Nie";
 prog = "Pierwszy";
 
-
 // functions
 console.log(fetchedQuestion[0].id)
-function popQ() {
-    switch(brutto) {
-    case 0:
-        fetchedQuestion[0].id = "q-PIT";
-        form.style.display = "none"
-
-        body.innerHTML += `
-
-        <div class="popped-q" style="display: flex"><p>PIT</p></div>
-        `
-        break;
-    case 1:
-        fetchedQuestion[1].id = "q-koszty";
-        form.style.display = "none"
-
-        body.innerHTML += `
-
-        <div class="popped-q" style="display: flex"><p>KOSZTY</p></div>
-        `
-        break;
-}
-    // if(e = "q-PIT"){
-    //     form.style.display = "none"
-
-    //     body.innerHTML += `
-
-    //     <div class="popped-q" style="display: flex"><p>PIT</p></div>
-    //     `
-    // }else if(e = "q-koszty") {
-    //     form.style.display = "none"
-
-    //     body.innerHTML += `
-
-    //     <div class="popped-q" style="display: flex"><p>KOSZTY</p></div>
-    //     `
-    // }
-};
-
-// function fetchQuestionId(e) {
-//     return e;
-// }
-
-
-
-
-
-
-
+console.log(fetchedQuestion[1].id)
 
 function onChange_(e, x) {
    if(x = "wpisz"){
