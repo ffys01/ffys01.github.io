@@ -12,11 +12,11 @@
     Nowy Ład</h1>
     <main>
         <form action="#">
-            <div class="w"><input type="text" onfocus="value=''" placeholder="Wpisz kwotę brutto" id="wpisz"></div>
+            <div class="w"><input type="number" placeholder="Wpisz kwotę brutto" name="wpisz" value="brutto" onchange="onChange_(value, id)"  id="wpisz"></div>
             
             
             <div class="l">
-                <select name="PIT" id="PIT">
+                <select name="PIT" id="PIT" onchange="onChange_(value, id)">
                     <option value="Nie">Nie</option>
                     <option value="Tak">Tak</option>
                 </select>
@@ -25,7 +25,7 @@
 
             
             <div class="l">
-                <select name="Koszty" id="Koszty">
+                <select name="Koszty" id="Koszty" onchange="onChange_(value, id)">
                     <option value="Zwykłe">Zwykłe</option>
                     <option value="Podwyższone">Podwyższone</option>
                 </select>
@@ -34,7 +34,7 @@
 
             
             <div class="l">
-                <select name="Ulga" id="Ulga">
+                <select name="Ulga" id="Ulga" onchange="onChange_(value, id)">
                     <option value="Brak">Brak</option>
                     <option value="Poj">Pojedyńcza</option>
                     <option value="Pod">Podwójna</option>
@@ -44,7 +44,7 @@
 
             
             <div class="l">
-                <select name="UlgaS" id="UlgaS">
+                <select name="UlgaS" id="UlgaS" onchange="onChange_(value, id)">
                     <option value="Nie">Nie</option>
                     <option value="Tak">Tak</option>
                 </select>
@@ -54,7 +54,7 @@
 
             
             <div class="l">
-                <select name="Prog" id="Prog">
+                <select name="Prog" id="Prog" onchange="onChange_(value, id)">
                     <option value="Pierwszy">Pierwszy</option>
                     <option value="Drugi">Drugi</option>
                 </select>
@@ -63,18 +63,23 @@
 
             <div class="check">
                 
-                <div class=" c"><input type="checkbox" name="Fundusz" id="Fundusz"><label for="Fundusz">Fundusz Pracy</label><a href="#" id="q-"><img src="https://img.icons8.com/ios/50/000000/help.png"/></a></div>
+                <div class=" c"><input type="checkbox" checked name="Fundusz" id="fundusz"><label for="Fundusz">Fundusz Pracy</label><a href="#" id="q-"><img src="https://img.icons8.com/ios/50/000000/help.png"/></a></div>
 
                
-                <div class=" c"> <input type="checkbox" name="FGSP" id="FGSP"><label for="FGSP">FGŚP</label><a href="#" id="q-"><img src="https://img.icons8.com/ios/50/000000/help.png"/></a></div>
+                <div class=" c"> <input type="checkbox" checked name="FGSP" id="FGSP"><label for="FGSP">FGŚP</label><a href="#" id="q-"><img src="https://img.icons8.com/ios/50/000000/help.png"/></a></div>
 
                 
                 <div class=" c"><input type="checkbox" name="PPK" id="PPK"><label for="PPK">PPK</label><a href="#" id="q-"><img src="https://img.icons8.com/ios/50/000000/help.png"/></a></div>
 
             </div>
 
-            <button id="Wylicz">Wylicz</button>
+            <button onclick="checkCheckbox()" id="Wylicz">Wylicz</button>
         </form>
+        <div class="wyniki">
+            <h2>Wyniki</h2>
+            <p>Twoj przychód wynosi: </p>
+        </div>
     </main>
 </body>
+<script src="./script.js"></script>
 </html>

@@ -24,7 +24,10 @@ form {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    //display: none;
 }
+
+.wyniki {display: none;}
 
 /* input main */
 
@@ -121,7 +124,7 @@ a{
 }
 
 .c:last-child {
-    margin-bottom: 40px;
+    margin-bottom: 10px;
 }
 
 /* Button */
