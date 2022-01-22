@@ -11,15 +11,18 @@ let body = document.body;
 const form = document.getElementById("formularz");
 const h1 = document.getElementById("h-1")
 let poppedQ = document.getElementById("popped-q");
-
+const wylicz = document.getElementById('wylicz');
+const wyniki = document.getElementById("wyniki");
+let pensja = 0;
 // default values
 
 brutto = 0;
-PIT = "Nie";
-koszty = "Zwykle";
-ulga = "Brak";
-ulgaS = "Nie";
-prog = "Pierwszy";
+PIT = "nie";
+koszty = "zwykle";
+ulga = "brak";
+ulgaS = "nie";
+prog = "pierwszy";
+
 
 // fetched question
 
@@ -204,34 +207,175 @@ function exit() {
     h1.style.display = "block"
 }
 
-
-
 function onChange_(e, x) {
-   if(x = "wpisz"){
-       brutto = e;
-       console.log(brutto);
-   }
-   else if(x = "PIT"){
-       PIT = e;
-       console.log(PIT)
-   }
-   else if(x = "koszty"){
-    koszty = e;
-    console.log(koszty);
+    if(x == "wpisz"){
+         brutto = e;
+        console.log(brutto);
     }
-    else if(x = "ulga"){
+    else if(x == "PIT"){
+        PIT = e;
+        console.log(PIT)
+    }
+    else if(x == "koszty"){
+        koszty = e;
+        console.log(koszty);
+    }
+    else if(x == "ulga"){
         ulga = e;
         console.log(ulga);
     }
-    else if(x = "ulgaS"){
+    else if(x == "ulgaS"){
         ulgaS = e;
         console.log(ulgaS);
     }
-    else if(x = "prog"){
+    else if(x == "prog"){
         prog = e;
         console.log(prog);
     }
 }
+
+function calculate() {
+
+
+
+    function result() {
+        console.log("wywlono mnie")
+        form.style.display = "none";
+        h1.style.display = "none"
+        wyniki.style.display = "block";
+
+        wyniki.innerHTML += `
+            <h2>Wyniki</h2>
+            <div class="przychod">
+                <h4>Twój przychód(netto) wynosi:</h4>
+                <p> ${pensja} </p>
+            </div>
+            <button id="powtorz">Powtórz</button>
+        `
+    }
+
+    let bruttoWithoutSocial = 0;
+    let socialTax = 0;
+    let brutto_SocialAndMedicalTax = 0;
+    let taxBase = 0;
+    let tax = 0;
+    let ulgaMiddle1 = 0;
+    let ulgaMiddle2 = 0;
+
+
+    /* done */
+    function calculateTaxBase(){
+        function calculateBrutto (){
+
+            bruttoWithoutSocial = brutto - (brutto * 0.1371);
+            console.log("brutto bez socialy " + bruttoWithoutSocial)
+
+            socialTax = brutto * 0.1371;
+            console.log("Składka socjlana " + socialTax)
+
+            brutto_SocialAndMedicalTax = bruttoWithoutSocial - 0.09;
+
+            return brutto_SocialAndMedicalTax;
+            console.log("składka zdrowotna " + brutto_SocialAndMedicalTax)
+
+        }
+
+        calculateBrutto()
+    }
+
+
+
+
+    function calculateTax() {
+
+        if(PIT == "nie"){
+            calculateTaxBase();
+            console.log("sprawdzam nie pit")
+
+
+
+
+            function checkKoszty() {
+                if(koszty == "zwykłe"){
+                    console.log(taxBase)
+                    return taxBase = Math.round(bruttoWithoutSocial - 250);
+
+                }else if(koszty == "podwyższone"){
+                    console.log(taxBase)
+                    return taxBase = Math.round(bruttoWithoutSocial - 300);
+                }
+            }
+
+            function checkUlga(){
+                if(ulga == "poj"){
+                    return 425
+                }else if(ulga == "brak") {
+                    return 0;
+                }
+            }
+            taxBase = taxBase - checkKoszty
+            taxBase = taxBase - checkUlga();
+
+            function checkUlgaS(){
+                if(ulgaS == "tak"){
+
+                    checkKoszty();
+                    checkUlga();
+                    checkProg();
+
+                    if(pensja > 5701 && pensja < 8549){
+
+                        ulgaMiddle1 = (pensja * 0.668-380.5)/0.17
+                        console.log(ulgaMiddle1)
+                        return taxBase = taxBase-ulgaMiddle1
+
+                    }else if(pensja > 8549 && pensja < 11141){
+
+                        checkKoszty();
+                        checkUlga();
+                        checkProg();
+
+                        ulgaMiddle2 = (pensja * (-0.735) + 819.08)/0.17
+                        console.log(ulgaMiddle2)
+                        return taxBase = taxBase-ulgaMiddle2
+                    }
+                }else{
+                    return pensja = pensja
+                }
+            }
+
+            function checkProg(){
+                if(prog == "pierwszy"){
+                    tax = taxBase * 0.17;
+                    return pensja = pensja - tax;
+                }else if(prog == "drugi"){
+                    tax = taxBase * 0.32;
+                    return pensja = pensja - tax;
+                }
+            }
+            
+            checkProg();
+            result();
+
+        }else if(PIT == "tak"){
+            calculateTaxBase();
+            pensja = calculateBrutto();
+            result()
+        }
+    }
+
+    calculateTax();
+
+}
+
+
+
+
+
+
+wylicz.addEventListener("click", calculate)
+
+
 
 function checkCheckbox() {
     console.log(fundusz.checked);

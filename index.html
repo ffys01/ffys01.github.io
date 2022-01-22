@@ -17,24 +17,24 @@
             
             <div class="l">
                 <select name="PIT" id="PIT" onchange="onChange_(value, id)">
-                    <option value="Nie">Nie</option>
-                    <option value="Tak">Tak</option>
+                    <option value="nie">Nie</option>
+                    <option value="tak">Tak</option>
                 </select>
                 <label for="PIT">Zwolnienie z PIT</label><a href="#" id="q-PIT"><img src="https://img.icons8.com/ios/50/000000/help.png"/></a>
             </div>
 
             
             <div class="l">
-                <select name="Koszty" id="Koszty" onchange="onChange_(value, id)">
-                    <option value="Zwykłe">Zwykłe</option>
-                    <option value="Podwyższone">Podwyższone</option>
+                <select name="Koszty" id="koszty" onchange="onChange_(value, id)">
+                    <option value="zwykłe">Zwykłe</option>
+                    <option value="podwyższone">Podwyższone</option>
                 </select>
                 <label for="Koszty">Koszty</label><a name="q-koszty" href="#" id="q-koszty"><img src="https://img.icons8.com/ios/50/000000/help.png"/></a>
             </div>
 
             
             <div class="l">
-                <select name="Ulga" id="Ulga" onchange="onChange_(value, id)">
+                <select name="Ulga" id="ulga" onchange="onChange_(value, id)">
                     <option value="Brak">Brak</option>
                     <option value="Poj">Pojedyńcza</option>
 <!--                     <option value="Pod">Podwójna</option> -->
@@ -44,9 +44,9 @@
 
             
             <div class="l">
-                <select name="UlgaS" id="UlgaS" onchange="onChange_(value, id)">
-                    <option value="Nie">Nie</option>
-                    <option value="Tak">Tak</option>
+                <select name="UlgaS" id="ulgaS" onchange="onChange_(value, id)">
+                    <option value="nie">Nie</option>
+                    <option value="tak">Tak</option>
                 </select>
                 
                 <label for="UlgaS">Ulga dla klasy średniej</label><a href="#" id="q-ulgaS"><img src="https://img.icons8.com/ios/50/000000/help.png"/></a>
@@ -54,9 +54,9 @@
 
             
             <div class="l">
-                <select name="Prog" id="Prog" onchange="onChange_(value, id)">
-                    <option value="Pierwszy">Pierwszy</option>
-                    <option value="Drugi">Drugi</option>
+                <select name="Prog" id="prog" onchange="onChange_(value, id)">
+                    <option value="pierwszy">Pierwszy</option>
+                    <option value="drugi">Drugi</option>
                 </select>
                 <label for="Prog">Próg podatkowy</label><a ef="#" id="q-prog"><img src="https://img.icons8.com/ios/50/000000/help.png"/></a>
             </div>
@@ -73,11 +73,9 @@
 
             </div>
 
-            <button onclick="checkCheckbox()" id="Wylicz">Wylicz</button>
+            <button id="wylicz">Wylicz</button>
         </form>
-        <div class="wyniki">
-            <h2>Wyniki</h2>
-            <p>Twoj przychód wynosi: </p>
+        <div id="wyniki">
         </div>
     </main>
 </body>
