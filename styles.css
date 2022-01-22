@@ -152,6 +152,18 @@ button {
 
 /* question mark window */
 
+
+.wrench {
+    opacity: 1;
+    width: 30px;
+    height: 30px;
+}
+
+.list {
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
 #popped-q {
     display: none;
     flex-direction: column;
