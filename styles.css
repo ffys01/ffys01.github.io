@@ -21,6 +21,11 @@ h1 {
     margin-bottom: 40px;
 }
 
+.h1 {
+    display: flex;
+    justify-content: center;
+}
+
 h3 {
     font-size: 40px;
     font-weight: bolder;
@@ -104,7 +109,6 @@ label {
 img {
     height: 20px;
     width: 20px;
-    background: transparent url('img/icons8-help-50 (1).png') 0% 0% no-repeat padding-box;
     opacity: 0.5;
 }
 
@@ -193,4 +197,10 @@ button {
     opacity: 1;
     width: 46px;
     height: 40px;
+}
+
+/* wyniki */
+
+#powtorz {
+    display: none;
 }

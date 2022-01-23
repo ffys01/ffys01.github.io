@@ -8,11 +8,11 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1 id="h-1">Kalkulator Przychodu<br>
-    Nowy Ład</h1>
+    <div class="h1"><h1 id="h-1">Kalkulator Przychodu<br>Nowy Ład 2022</h1></div>
+    
     <div id="popped-q"></div>
     <main>
-        <form action="#" id="formularz">
+        <form action="javascript:void(0)" id="formularz">
             <div class="w"><input type="number" placeholder="Wpisz kwotę brutto" name="wpisz" value="brutto" onchange="onChange_(value, id)"  id="wpisz"></div>
             
             <div class="l">
@@ -20,26 +20,26 @@
                     <option value="nie">Nie</option>
                     <option value="tak">Tak</option>
                 </select>
-                <label for="PIT">Zwolnienie z PIT</label><a href="#" id="q-PIT"><img src="https://img.icons8.com/ios/50/000000/help.png"/></a>
+                <label for="PIT">Zwolnienie z PIT</label><a href="#" id="q-PIT"><img src="./question.png"/></a>
             </div>
 
             
             <div class="l">
                 <select name="Koszty" id="koszty" onchange="onChange_(value, id)">
-                    <option value="zwykłe">Zwykłe</option>
-                    <option value="podwyższone">Podwyższone</option>
+                    <option value="zwykle">Zwykłe</option>
+                    <option value="podwyzszone">Podwyższone</option>
                 </select>
-                <label for="Koszty">Koszty</label><a name="q-koszty" href="#" id="q-koszty"><img src="https://img.icons8.com/ios/50/000000/help.png"/></a>
+                <label for="Koszty">Koszty</label><a name="q-koszty" href="#" id="q-koszty"><img src="./question.png"/></a>
             </div>
 
             
             <div class="l">
                 <select name="Ulga" id="ulga" onchange="onChange_(value, id)">
-                    <option value="Brak">Brak</option>
-                    <option value="Poj">Pojedyńcza</option>
+                    <option value="brak">Brak</option>
+                    <option value="poj">Pojedyńcza</option>
 <!--                     <option value="Pod">Podwójna</option> -->
                 </select>
-                <label for="Ulga">Ulga</label><a href="#" id="q-ulga"><img src="https://img.icons8.com/ios/50/000000/help.png"/></a>
+                <label for="Ulga">Ulga</label><a href="#" id="q-ulga"><img src="./question.png"/></a>
             </div>
 
             
@@ -49,7 +49,7 @@
                     <option value="tak">Tak</option>
                 </select>
                 
-                <label for="UlgaS">Ulga dla klasy średniej</label><a href="#" id="q-ulgaS"><img src="https://img.icons8.com/ios/50/000000/help.png"/></a>
+                <label for="UlgaS">Ulga dla klasy średniej</label><a href="#" id="q-ulgaS"><img src="./question.png"/></a>
             </div>
 
             
@@ -58,26 +58,50 @@
                     <option value="pierwszy">Pierwszy</option>
                     <option value="drugi">Drugi</option>
                 </select>
-                <label for="Prog">Próg podatkowy</label><a ef="#" id="q-prog"><img src="https://img.icons8.com/ios/50/000000/help.png"/></a>
+                <label for="Prog">Próg podatkowy</label><a ef="#" id="q-prog"><img src="./question.png"/></a>
             </div>
 
             <div class="check">
                 
-                <div class=" c"><input type="checkbox" disabled checked name="Fundusz" id="fundusz"><label for="Fundusz">Fundusz Pracy</label><a href="#" id="q-fundusz"><img src="https://img.icons8.com/ios/50/000000/help.png"/></a></div>
+                <div class=" c"><input type="checkbox" disabled checked name="Fundusz" id="fundusz"><label for="Fundusz">Fundusz Pracy</label><a href="#" id="q-fundusz"><img src="./question.png"/></a></div>
 
                
-                <div class=" c"> <input type="checkbox" disabled checked name="FGSP" id="FGSP"><label for="FGSP">FGŚP</label><a href="#" id="q-FGSP"><img src="https://img.icons8.com/ios/50/000000/help.png"/></a></div>
+                <div class=" c"> <input type="checkbox" disabled checked name="FGSP" id="FGSP"><label for="FGSP">FGŚP</label><a href="#" id="q-FGSP"><img src="./question.png"/></a></div>
 
                 
-                <div class=" c"><input type="checkbox" disabled name="PPK" id="PPK"><label for="PPK">PPK</label><a href="#" id="q-PPK"><img src="https://img.icons8.com/ios/50/000000/help.png"/></a></div>
+                <div class=" c"><input type="checkbox" disabled name="PPK" id="PPK"><label for="PPK">PPK</label><a href="#" id="q-PPK"><img src="./question.png"/></a></div>
 
             </div>
 
             <button id="wylicz">Wylicz</button>
         </form>
         <div id="wyniki">
+            <button id="powtorz">Powtórz</button>
         </div>
     </main>
 </body>
 <script src="./script.js"></script>
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.4/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.4/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyAgrx4EkPnsOaeLxV4BDCXxdIo9uJ1foGA",
+      authDomain: "kalkulator-nowy-lad.firebaseapp.com",
+      projectId: "kalkulator-nowy-lad",
+      storageBucket: "kalkulator-nowy-lad.appspot.com",
+      messagingSenderId: "101135989902",
+      appId: "1:101135989902:web:7c7effdff5a5b5e263dddf",
+      measurementId: "G-MKP0P17BSV"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+  </script>
 </html>
