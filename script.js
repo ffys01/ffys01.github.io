@@ -128,8 +128,8 @@ qUlgaS.addEventListener("click", () => {
             <a href="#" id="exit" onclick="exit()" ><img class="x" src="./x.png"></a>
         </div>
         <div class="description">
-            <h4>Nie</h4><p>Wybierz tą opcje jeżeli twoje roczne przychody <b>nie przekroczyły 68 412zł.</b></p>
-            <h4>Tak</h4><p>Wybierz tą opcje jeżeli twoje roczne przychody są <b>wyższe od 68 412zł</b> ale <b>mniejsze od 133692zł.</b></p>
+            <h4>Nie</h4><p>Wybierz tą opcje jeżeli twoje roczne wynagrodzenie <b>nie przekroczyło 68 412zł brutto.</b></p>
+            <h4>Tak</h4><p>Wybierz tą opcje jeżeli twoje roczne wynagrodzenie jest <b>wyższe od 68 412zł</b> ale <b>mniejsze od 133692zł.</b></p>
         </div>
 
     `
