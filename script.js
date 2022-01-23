@@ -65,7 +65,7 @@ qPIT.addEventListener("click", () => {
             <h4>Tak</h4>
             <p>Wybierz tą opcje jeżeli:
                 <li class="list">nie ukończyłeś <b>26</b> roku życia.</li>
-                <li class="list">jesteś rodzice przynajmniej <b>czwórki dzieci</b></li>
+                <li class="list">jesteś rodzicem przynajmniej <b>czwórki dzieci</b></li>
                 <li class="list">zrezygnowałeś z pobierania emerytury w celu dalszej aktywności zawodowej</li>
             </p>
             <p>W takim przypadku jesteś <b>zwolniony z płacenia</b> podatku dochodowego</p>
